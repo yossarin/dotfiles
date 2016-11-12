@@ -1,31 +1,37 @@
-" UI config
-set number           " show line numbers
-set cursorline       " highlight current line
-filetype indent on   " load filetype-specific indent files
-set showcmd          " show command in bottom bar
-set wildmenu         " visual autocomplete for command menu
-set lazyredraw       " redraw only when we need to.
-set showmatch        " highlight matching [{()}]
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-" Searching
-set incsearch        " search as characters are entered
-set hlsearch         " highlight matches
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Movement
-"   move vertically by visual line
-nnoremap j gj
-nnoremap k gk
-"   move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-"   highlight last inserted text
-nnoremap gV `[v`]
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" Spaces & TABs
-set tabstop=2        " number of visual spaces per TAB
-set softtabstop=2    " number of spaces in tab when editing
-set expandtab        " tabs are spaces
+Plugin 'tpope/vim-fugitive'
 
-syntax enable        " enable syntax processing
+Plugin 'ctrlpvim/ctrlp.vim'
 
-set mouse=v          " enable mouse control
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+set number
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=0
+set expandtab
+set listchars=space:.,eol:$,tab:>-,trail:~,extends:>,precedes:<
+nnoremap <F3> :set list!<CR>
+
+function! NumberToggle()
+    if(&relativenumber == 1)
+        set number
+   else
+       set relativenumber
+   endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
+
