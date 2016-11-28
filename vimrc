@@ -85,13 +85,4 @@ Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
-function! NumberToggle()
-    if(&relativenumber == 1)
-        set number
-   else
-       set relativenumber
-   endif
-endfunc
-
-nnoremap <C-n> :call NumberToggle()<cr>
 

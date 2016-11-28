@@ -1,0 +1,16 @@
+#!/bin/bash
+
+alias ..='cd ..'
+alias cd..='cd ..'
+alias la='ls -la'
+alias ll='ls -l'
+alias gti='git'
+alias tmux='TERM=xterm-256color tmux'
+alias psauxgrep='ps aux | grep -v grep | grep'
+alias git='LC_ALL=en_US.UTF-8 git'
+alias gitc="git checkout"
+alias gits="git status"
+alias gitf="git fetch"
+alias gitfa="git fetch --all"
+alias gti="git"
+alias agq="ag -Q"
