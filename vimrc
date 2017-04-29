@@ -77,9 +77,6 @@ Plug 'chrisbra/vim-show-whitespace'
 " fugitive
 Plug 'tpope/vim-fugitive'
 
-" Jedi - py autocomplete
-Plug 'davidhalter/jedi-vim'
-
 " SilverSearcher Ag
 Plug 'rking/ag.vim'
 
