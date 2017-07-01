@@ -52,6 +52,9 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
+" ctrlp use git index
+let g:ctrlp_user_command = ['.git/', 'git ls-files --cached --others  --exclude-standard %s']
+
 " show whitespaces
 map <C-s> :ShowWhiteToggle<CR>
 
@@ -66,7 +69,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'itchyny/lightline.vim'
 
 " ctrlp
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " flake8
 Plug 'nvie/vim-flake8'
