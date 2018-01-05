@@ -1,13 +1,13 @@
 #!/bin/bash
-
 source ~/repos/dotfiles/aliases
 source ~/repos/dotfiles/funcs
-
+source ~/repos/dotfiles/osx-git-completion.bash
 echo "> source osx_bashrc"
 
 alias ls="ls -G"
 alias showhidden="defaults write com.apple.finder AppleShowAllFiles YES"
 alias hidefiles="defaults write com.apple.finder AppleShowAllFiles NO"
+alias sslchrome="SSLKEYLOGFILE=~/keylogfile.log /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 export ANDROID_HOME=~/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
