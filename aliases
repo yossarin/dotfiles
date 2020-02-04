@@ -16,3 +16,5 @@ alias gti="git"
 alias agq="ag -Q"
 alias di="docker images"
 alias da="docker ps -a"
+alias rebuild+gatsby="cd ~/repos/online/ && cd playful-ui/ && npm run build && cd ../web && gatsby develop"
+alias rn=react-native
